@@ -1,10 +1,7 @@
 name: Reusable Hello World Workflow
 
-# This makes the workflow reusable by other workflows
 on:
   workflow_call:
-    # Optional inputs that calling workflows can pass    
-    # Optional outputs that calling workflows can use
     outputs:
       greeting:
         description: "The greeting message"
