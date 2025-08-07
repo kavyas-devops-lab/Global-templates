@@ -3,19 +3,7 @@ name: Reusable Hello World Workflow
 # This makes the workflow reusable by other workflows
 on:
   workflow_call:
-    # Optional inputs that calling workflows can pass
-    inputs:
-      name:
-        description: 'Name to greet'
-        required: false
-        type: string
-        default: 'World'
-      environment:
-        description: 'Environment name'
-        required: false
-        type: string
-        default: 'development'
-    
+    # Optional inputs that calling workflows can pass    
     # Optional outputs that calling workflows can use
     outputs:
       greeting:
@@ -24,22 +12,13 @@ on:
 
 jobs:
   hello:
-    name: Hello World Job
+    name: Hello World Job reusable workflow
     runs-on: ubuntu-latest
-    
-    # Define outputs for this job
-    outputs:
-      greeting: ${{ steps.greet.outputs.greeting }}
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
       - name: Say Hello
         id: greet
         run: |
           # Set output for other jobs to use
-          greeting="Hello, ${{ inputs.name }} from ${{ inputs.environment }}!"
-          echo "greeting=$greeting" >> $GITHUB_OUTPUT
-          echo "::notice title=Greeting::$greeting"
+          greeting="called the reusable workflows"
+
       
