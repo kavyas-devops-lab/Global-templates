@@ -13,9 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: reusable workflow
-        id: greet
         run: |
           # Set output for other jobs to use
-          greeting="called the reusable workflows"
+          echo="called the reusable workflows"
 
       
