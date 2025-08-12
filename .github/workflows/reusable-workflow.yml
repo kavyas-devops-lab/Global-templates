@@ -12,7 +12,7 @@ jobs:
     name: Hello World Job reusable workflow
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
+      - name: reusable workflow
         id: greet
         run: |
           # Set output for other jobs to use
