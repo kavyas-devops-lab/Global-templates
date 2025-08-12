@@ -9,7 +9,7 @@ on:
 
 jobs:
   hello:
-    name: Hello World Job reusable workflow
+    name: called reusable workflow
     runs-on: ubuntu-latest
     steps:
       - name: reusable workflow
