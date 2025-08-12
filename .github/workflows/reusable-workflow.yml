@@ -1,4 +1,4 @@
-name: Reusable Hello World Workflow
+name: Reusable Workflow
 
 on:
   workflow_call:
