@@ -2,19 +2,15 @@ name: Reusable Workflow
 
 on:
   workflow_call:
-    outputs:
-      greeting:
-        description: "The greeting message"
-        value: ${{ jobs.hello.outputs.greeting }}
 
 jobs:
-  hello:
+  reusable-workflow:
     name: called reusable workflow
     runs-on: ubuntu-latest
     steps:
       - name: reusable workflow
         run: |
           # Set output for other jobs to use
-          echo="called the reusable workflows"
+          echo "called the reusable workflows"
 
       
